@@ -9,6 +9,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import  Accordion  from "react-bootstrap/Accordion";
 import { Card, useAccordionButton } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
 
 const initialState = {
     nombre: "",
@@ -431,6 +432,7 @@ function CVModificar() {
         );
         if (response.status === 200) {
           console.log(response.data);
+          toast.success("Curriculum modificado exitosamente");
         }
       };
 
@@ -3581,6 +3583,7 @@ function CVModificar() {
             </Col>
           </Row>
         </Form>
+        <ToastContainer/>
       </Container>
     </>
 

@@ -2,6 +2,7 @@ import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
 import { Grid, h } from "gridjs";
 import "gridjs/dist/theme/mermaid.css";
 import { useEffect, useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 function ListaCV() {
   const wrapperRef = useRef(null);
@@ -45,6 +46,7 @@ function ListaCV() {
                 );
                 if (res.ok) {
                   console.error("Curriculum eliminado");
+                  toast.info("curriculum elimando correctamente");
                 } else {
                   console.error("Error al eliminar el usuario");
                 }
@@ -110,6 +112,7 @@ function ListaCV() {
         ref={wrapperRef}
         style={{ textAlign: "center", marginTop: "30px" }}
       />
+      <ToastContainer/>
     </>
   );
 }

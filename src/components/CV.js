@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { Card, useAccordionButton } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
 
 const initialState = {
   nombre: "",
@@ -413,6 +414,7 @@ function CV() {
     const response = await axios.post("http://localhost:5000/curriculum", data);
     if (response.status === 200) {
       console.log(response.data);
+      toast.success("Curriculum guardado correctamente");
     }
   };
 
@@ -3563,6 +3565,7 @@ function CV() {
             </Col>
           </Row>
         </Form>
+        <ToastContainer />
       </Container>
     </>
   );
