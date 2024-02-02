@@ -10,18 +10,12 @@ function ListaCV() {
     columns: [
       "ID",
       "Nombre",
-      "Apellido Paterno",
-      "Apellido Materno",
-      "Direccion",
+      "Apellidos",
+      "Titulo",
       "Telefono",
       "Correo electronico",
-      "Preparacion Academica",
       "Linkedin",
-      "Github",
-      "Experiencia profesional",
       "Idiomas",
-      "Habilidades",
-      "Objetivo",
       {
         name: "Modificar",
         formatter: (cell, row) => {
@@ -95,18 +89,13 @@ function ListaCV() {
        data.map(curriculum => [
         curriculum.id,
         curriculum.nombre,
-        curriculum.apellido_paterno,
-        curriculum.apellido_materno,
-        curriculum.direccion,
+        curriculum.apellidos,
+        curriculum.titulo,
         curriculum.telefono,
         curriculum.correo_electronico,
-        curriculum.preparacion_academica,
         curriculum.linkedin,
-        curriculum.github,
-        curriculum.experiencia_profesional,
-        curriculum.idiomas,
-        curriculum.habilidades,
-        curriculum.objetivo,
+        curriculum.idioma,
+        curriculum.linkedin
        ]) 
 },
   });

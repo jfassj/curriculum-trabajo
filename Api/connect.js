@@ -5,7 +5,7 @@ const connect = async () => {
     host: "localhost",
     user: "root",
     password: "",
-    database: "curriculum",
+    database: "curriculum1",
   });
 };
 module.exports = connect;

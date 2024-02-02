@@ -10,7 +10,7 @@ function BarraSuperior() {
       <Navbar bg="info" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Contrataciones
+            CO
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -18,18 +18,12 @@ function BarraSuperior() {
               <Nav.Link as={Link} to="/">
                 Inicio
               </Nav.Link>
-              <NavDropdown title="Curriculims" id="basic-nav-dropdown">
+              <NavDropdown title="Curriculums" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="cv">
                   Lista
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="cv/agregar">
                   Agregar
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="cv/eliminar">
-                  Eliminar
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="cv/modificar">
-                  Modificar
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

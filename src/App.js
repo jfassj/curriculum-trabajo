@@ -2,11 +2,13 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import BarraSuperior from "./components/BarraSuperior";
-import SubirCV from "./components/SubirCV";
+//import SubirCV from "./components/SubirCV";
 import Home from "./components/Home";
 import EliminarCV from "./components/EliminarCV";
-import ModificarCV from "./components/ModificarCV";
+//import ModificarCV from "./components/ModificarCV";
 import ListaCV from "./components/ListaCV";
+import CV from "./components/CV";
+import CVModificar from "./components/CVModificar";
 
 const App = () => {
   const [cvs, setCvs] = useState([]); // Estado para almacenar los currículos
@@ -22,9 +24,9 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="cv">
             <Route index element={<ListaCV />} />
-            <Route path="agregar" element={<SubirCV />} />
+            <Route path="agregar" element={<CV />} />
             <Route path="eliminar/:cv" element={<EliminarCV />} />
-            <Route path="modificar/:cv" element={<ModificarCV />} />
+            <Route path="modificar/:cv" element={<CVModificar />} />
           </Route>
         </Route>
       </Routes>
